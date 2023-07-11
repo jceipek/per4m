@@ -116,7 +116,7 @@ def main(argv=sys.argv):
     else:
         raise ValueError(f'Unknown type {args.type}')
     with open(args.output, 'w') as f:
-        json.dump({'traceEvents': trace_events}, f)
+        json.dump({"viztracer_metadata":{},'traceEvents': trace_events}, f)
     if verbose >= 1:
         print(f"Wrote to {args.output}")
 
